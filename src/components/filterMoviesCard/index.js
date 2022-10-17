@@ -18,7 +18,7 @@ const formControl =
     backgroundColor: "rgb(255, 255, 255)"
   };
 
-  export default function FilterMoviesCard(props) {
+  export default function FilterCard(props) {
     const [genres, setGenres] = useState([{ id: '0', name: "All" }])
 
     useEffect(() => {
@@ -39,8 +39,8 @@ const formControl =
     
       const handleChange = (e, type, value) => {
         e.preventDefault()
-        // Completed later
-      };
+        props.onUserInput(type, value)   // NEW
+      }
       const handleTextChange = e => {
         handleChange(e, "name", e.target.value)
       }
