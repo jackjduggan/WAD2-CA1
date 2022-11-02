@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 
 const MovieHeader = (props) => {
   const movie = props.movie;
-  const navigate = ;
+  const navigate = useNavigate();
 
   return (
     <Paper 
