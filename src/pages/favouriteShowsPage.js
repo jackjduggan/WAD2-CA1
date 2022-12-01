@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
 import PageTemplate from "../components/templateShowListPage";
-import { ShowsContext } from "../contexts/ShowsContext";
+import { ShowsContext } from "../contexts/showsContext";
 import { useQueries } from "react-query";
 import { getShow } from "../api/tmdb-api";
 import Spinner from '../components/spinner';
-import RemoveFromShowsFavourites from "../components/cardIcons/removeFromShowsFavourites";
-import WriteShowReview from "../components/cardIcons/writeShowReview";
+import RemoveFromShowsFavourites from "../components/cardIcons/removeFromFavourites";
+import WriteShowReview from "../components/cardIcons/writeReview";
 
 const FavouriteShowsPage = () => {
   const {ShowsFavourites: ShowIds } = useContext(ShowsContext);

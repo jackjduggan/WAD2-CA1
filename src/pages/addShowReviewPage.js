@@ -1,6 +1,6 @@
 import React from "react";
 import PageTemplate from "../components/templateShowPage";
-import ReviewForm from "../components/ShowReviewForm";
+import ReviewForm from "../components/showReviewForm";
 import { useLocation } from "react-router-dom";
 import { useQuery } from "react-query";
 import { getShow } from "../api/tmdb-api";

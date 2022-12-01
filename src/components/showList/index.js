@@ -1,5 +1,5 @@
 import React from "react";
-import Show from "../ShowCard";
+import Show from "../showCard";
 import Grid from "@mui/material/Grid";
 
 const ShowList = ( {Shows, action }) => {

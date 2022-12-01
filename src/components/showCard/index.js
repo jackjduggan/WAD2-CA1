@@ -13,7 +13,7 @@ import Grid from "@mui/material/Grid";
 import img from '../../images/film-poster-placeholder.png';
 import { Link } from "react-router-dom";
 import Avatar from '@mui/material/Avatar';
-import { ShowsContext } from "../../contexts/ShowsContext";
+import { ShowsContext } from "../../contexts/showsContext";
 
 export default function ShowCard({ Show, action }) {
   const { ShowsFavourites } = useContext(ShowsContext);

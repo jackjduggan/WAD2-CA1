@@ -3,7 +3,7 @@ import { getShows } from "../api/tmdb-api";
 import PageTemplate from '../components/templateShowListPage';
 import { useQuery } from 'react-query';
 import Spinner from '../components/spinner';
-import AddToShowsFavouritesIcon from '../components/cardIcons/addToShowsFavourites'
+import AddToShowsFavouritesIcon from '../components/cardIcons/addToFavourites'
 
 const ShowsPage = (props) => {
 

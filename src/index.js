@@ -21,7 +21,7 @@ import { QueryClientProvider, QueryClient } from "react-query";
 import { ReactQueryDevtools } from 'react-query/devtools';
 // Context Providers
 import MoviesContextProvider from "./contexts/moviesContext";
-import ShowsContextProvider from "./contexts/ShowsContext";
+import ShowsContextProvider from "./contexts/showsContext";
 
 const queryClient = new QueryClient({
   defaultOptions: {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Header from "../headerShowList";
 import FilterCard from "../filterShowsCard";
-import ShowList from "../ShowList";
+import ShowList from "../showList";
 import Grid from "@mui/material/Grid";
 
 function ShowListPageTemplate({ Shows, title, action }) {
