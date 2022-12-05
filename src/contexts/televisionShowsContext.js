@@ -7,7 +7,7 @@ const TelevisionShowsContextProvider = (props) => {
   const [myReviews, setMyReviews] = useState( {} ) 
   //removed must watch for television shows
 
-  const addToTelevisionShowsFavourites = (televisionShow) => {
+  const addToTelevisionFavourites = (televisionShow) => {
     let newFavourites = [...favourites];
     if (!favourites.includes(televisionShow.id)) {
       newFavourites.push(televisionShow.id);
@@ -16,7 +16,7 @@ const TelevisionShowsContextProvider = (props) => {
   };
 
   // We will use this function in a later section
-  const removeFromTelevisionShowsFavourites = (televisionShow) => {
+  const removeFromTelevisionFavourites = (televisionShow) => {
     setFavourites( favourites.filter(
       (tSId) => tSId !== televisionShow.id
     ) )
@@ -30,8 +30,8 @@ const TelevisionShowsContextProvider = (props) => {
     <TelevisionShowsContext.Provider
       value={{
         favourites,
-        addToTelevisionShowsFavourites,
-        removeFromTelevisionShowsFavourites,
+        addToTelevisionFavourites,
+        removeFromTelevisionFavourites,
         addTelevisionShowReview,
       }}
     >

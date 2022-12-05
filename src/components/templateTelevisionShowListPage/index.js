@@ -12,7 +12,7 @@ function TelevisionShowListPageTemplate({ televisionShows, title, action }) {
 
   let displayedTelevisionShows = televisionShows
     .filter((tS) => {
-      return tS.title.toLowerCase().search(nameFilter.toLowerCase()) !== -1;
+      return tS.name.toLowerCase().search(nameFilter.toLowerCase()) !== -1;
     })
     .filter((tS) => {
       return genreId > 0 ? tS.genre_ids.includes(genreId) : true;

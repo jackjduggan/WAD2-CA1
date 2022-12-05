@@ -42,7 +42,7 @@ const TelevisionShowDetails = ({ televisionShow }) => {  // Don't miss this!
         <li>
           <Chip label="Genres" sx={chip} color="primary" />
         </li>
-        {televisionShow.televisionGenres.map((g) => (
+        {televisionShow.genres.map((g) => (
           <li key={g.name}>
             <Chip label={g.name} sx={chip} />
           </li>

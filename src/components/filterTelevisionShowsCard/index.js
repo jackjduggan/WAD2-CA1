@@ -31,9 +31,9 @@ const formControl =
     if (isError) {
       return <h1>{error.message}</h1>;
     }
-    const televisionGenres = data.televisionGenres;
-    if (televisionGenres[0].name !== "All"){
-      televisionGenres.unshift({ id: "0", name: "All" });
+    const genres = data.genres;
+    if (genres[0].name !== "All"){
+      genres.unshift({ id: "0", name: "All" });
     }
 
     // useEffect(() => {
@@ -86,7 +86,7 @@ const formControl =
     value={props.genreFilter}
     onChange={handleGenreChange}
   >
-            {televisionGenres.map((genre) => {
+            {genres.map((genre) => {
               return (
                 <MenuItem key={genre.id} value={genre.id}>
                   {genre.name}

@@ -8,7 +8,7 @@ const RemoveFromTelevisionFavouritesIcon = ({ televisionShow }) => {
 
   const handleRemoveFromTelevisionFavourites = (e) => {
     e.preventDefault();
-    context.removeFromFavourites(televisionShow);
+    context.removeFromTelevisionFavourites(televisionShow);
   };
   return (
     <IconButton
