@@ -10,14 +10,11 @@ Name: Jack Duggan
 + List of Must Watch Movies
 + List of Television Shows
 + List of Favourite Television Shows
-
++ Television Show Review Form
++ Television Show Reviews
 + Modified colour & appearance of all pages.
 
 ### New Features.
-
-[ Provide a bullet-point list of the __new features__ you added to the Movies Fan app.] 
- 
- e.g.
 
 + Can view a list of upcoming movies set for release in the future, with functionality for name and genre filtering.
 + Added ability to add movies from the upcoming movies list to a seperate "must watch" list. Once added, they can be viewed on the "Must Watch" page. To add the movie, click the playlist icon. The appearance of the card will then update to reflect its must watch status, much like the favourite movies.
