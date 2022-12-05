@@ -38,7 +38,7 @@ const TelevisionShowReviewForm = ({ televisionShow }) => {
 
   const handleSnackClose = (event) => {
     setOpen(false);
-    navigate("/televisionshows/favourites");
+    navigate("/television/favourites");
   };
 
   const onSubmit = (televisionShowReview) => {

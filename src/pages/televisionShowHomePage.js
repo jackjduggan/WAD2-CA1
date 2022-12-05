@@ -8,7 +8,7 @@ import AddToTelevisionFavouritesIcon from '../components/cardIcons/addToTelevisi
 
 const TelevisionShowHomePage = (props) => {
 
-  const {  data, error, isLoading, isError }  = useQuery('discover', getShows)
+  const {  data, error, isLoading, isError }  = useQuery('televisionshows', getShows)
 
   if (isLoading) {
     return <Spinner />
@@ -20,8 +20,8 @@ const TelevisionShowHomePage = (props) => {
   const televisionShows = data.results;
 
   // Redundant, but necessary to avoid app crashing.
-  const favourites = televisionShows.filter(m => m.favourite)
-  localStorage.setItem('favourites', JSON.stringify(favourites))
+  const televisionShowsFavourites = televisionShows.filter(tS => tS.favourite)
+  localStorage.setItem('favourites', JSON.stringify(televisionShowsFavourites))
   // const addToFavourites = (movieId) => true 
 
   return (

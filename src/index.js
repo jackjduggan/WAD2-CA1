@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Navigate, Routes } from "react-router-dom";
 import HomePage from "./pages/homePage";
 import MoviePage from "./pages/movieDetailsPage";
 import TelevisionShowHomePage from "./pages/televisionShowHomePage";
+import TelevisionShowPage from "./pages/televisionShowDetailsPage";
 // Other Pages
 import UpcomingMoviesPage from "./pages/upcomingMoviesPage";
 import FavouriteMoviesPage from "./pages/favouriteMoviesPage";
@@ -39,6 +40,7 @@ const App = () => {
       <QueryClientProvider client={queryClient}>
         <BrowserRouter>
           <SiteHeader />      {/* New Header  */}
+          <TelevisionShowsContextProvider>
           <MoviesContextProvider>
             <Routes>
               <Route path="/reviews/form" element={<WriteReviewPage/>} />
@@ -46,19 +48,17 @@ const App = () => {
               <Route exact path="/movies/favourites" element={<FavouriteMoviesPage/>} />
               <Route exact path="/movies/upcoming" element={<UpcomingMoviesPage/>} />
               <Route path="/movies/:id" element={<MoviePage />} />
+
+              <Route path="/television" element={<TelevisionShowHomePage />} />
+              <Route path="/reviews/televisionform" element={<WriteTelevisionShowReviewPage/>} />
+              <Route path="/reviews/:id" element={ <TelevisionShowReviewPage /> } />
+              <Route exact path="/television/favourites" element={<FavouriteTelevisionShowsPage/>} />
+              <Route path="/television/:id" element={<TelevisionShowPage />} />
+
               <Route path="/" element={<HomePage />} />
               <Route path="*" element={ <Navigate to="/" /> } />
             </Routes>
           </MoviesContextProvider>
-          <TelevisionShowsContextProvider>
-            <Routes>
-              <Route path="/televisionreviews/form" element={<WriteTelevisionShowReviewPage/>} />
-              <Route path="/televisionreviews/:id" element={ <TelevisionShowReviewPage /> } />
-              <Route exact path="/television/favourites" element={<FavouriteTelevisionShowsPage/>} />
-              <Route path="/television/:id" element={<TelevisionShowHomePage />} />
-              <Route path="/" element={<HomePage />} />
-              <Route path="*" element={ <Navigate to="/" /> } />
-            </Routes>
           </TelevisionShowsContextProvider>
         </BrowserRouter>
         <ReactQueryDevtools initialIsOpen={false} />
