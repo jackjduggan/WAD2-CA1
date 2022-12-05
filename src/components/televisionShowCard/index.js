@@ -14,27 +14,27 @@ import Grid from "@mui/material/Grid";
 import img from '../../images/film-poster-placeholder.png'
 import { Link } from "react-router-dom";
 import Avatar from '@mui/material/Avatar';
-import { MoviesContext } from "../../contexts/moviesContext";
+import { TelevisionShowsContext } from "../../contexts/televisionShowsContext";
 
-export default function MovieCard({ movie, action }) {
-  const { favourites, addToFavourites } = useContext(MoviesContext);
+export default function TelevisionShowCard({ televisionShow, action }) {
+  const { favourites, addToFavourites } = useContext(TelevisionShowsContext);
  
-   if (favourites.find((id) => id === movie.id)) {
-     movie.favourite = true;
+   if (favourites.find((id) => id === televisionShow.id)) {
+     televisionShow.favourite = true;
    } else {
-     movie.favourite = false
+     televisionShow.favourite = false
    }
   
-  // const handleAddToFavourite = (e) => {
-  //   e.preventDefault();
-  //   addToFavourites(movie);
-  // };
+  const handleAddToTelevisionFavourite = (e) => {
+    e.preventDefault();
+    addToFavourites(televisionShow);
+  };
 
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardHeader
         avatar={
-          movie.favourite ? (
+          televisionShow.favourite ? (
             <Avatar sx={{ backgroundColor: 'red' }}>
               <FavoriteIcon />
             </Avatar>
@@ -42,15 +42,15 @@ export default function MovieCard({ movie, action }) {
         }
         title={
           <Typography variant="h5" component="p">
-            {movie.title}{" "}
+            {televisionShow.title}{" "}
           </Typography>
         }
       />
       <CardMedia
         sx={{ height: 500 }}
         image={
-          movie.poster_path
-            ? `https://image.tmdb.org/t/p/w500/${movie.poster_path}`
+          televisionShow.poster_path
+            ? `https://image.tmdb.org/t/p/w500/${televisionShow.poster_path}`
             : img
         }
       />
@@ -59,20 +59,20 @@ export default function MovieCard({ movie, action }) {
           <Grid item xs={6}>
             <Typography variant="h6" component="p">
               <CalendarIcon fontSize="small" />
-              {movie.release_date}
+              {televisionShow.release_date}
             </Typography>
           </Grid>
           <Grid item xs={6}>
             <Typography variant="h6" component="p">
               <StarRateIcon fontSize="small" />
-              {"  "} {movie.vote_average}{" "}
+              {"  "} {televisionShow.vote_average}{" "}
             </Typography>
           </Grid>
         </Grid>
       </CardContent>
       <CardActions disableSpacing>
-    {action(movie)}
-    <Link to={`/movies/${movie.id}`}>
+    {action(televisionShow)}
+    <Link to={`/televisionShows/${televisionShow.id}`}>
       <Button variant="outlined" size="medium" color="primary">
         More Info ...
       </Button>
