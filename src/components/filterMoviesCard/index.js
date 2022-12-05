@@ -18,7 +18,7 @@ const formControl =
   {
     margin: 1,
     minWidth: 220,
-    backgroundColor: "rgb(255, 255, 255)"
+    backgroundColor: "rgb(255,215,0)"
   };
 
   export default function FilterMoviesCard(props) {
@@ -60,7 +60,7 @@ const formControl =
     <Card 
       sx={{
         maxWidth: 345,
-        backgroundColor: "rgb(204, 204, 0)"
+        backgroundColor: "rgb(255,140,0)"
       }} 
       variant="outlined">
       <CardContent>

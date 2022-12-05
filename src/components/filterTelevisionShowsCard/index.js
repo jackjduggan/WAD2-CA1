@@ -18,7 +18,7 @@ const formControl =
   {
     margin: 1,
     minWidth: 220,
-    backgroundColor: "rgb(255, 255, 255)"
+    backgroundColor: "rgb(0, 102, 102)"
   };
 
   export default function FilterTelevisionShowsCard(props) {
@@ -60,7 +60,7 @@ const formControl =
     <Card 
       sx={{
         maxWidth: 345,
-        backgroundColor: "rgb(204, 204, 0)"
+        backgroundColor: "rgb(0, 102, 102)"
       }} 
       variant="outlined">
       <CardContent>
