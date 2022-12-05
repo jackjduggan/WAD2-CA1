@@ -18,7 +18,7 @@ const formControl =
   {
     margin: 1,
     minWidth: 220,
-    backgroundColor: "rgb(0, 102, 102)"
+    backgroundColor: "rgb(220,20,60)"
   };
 
   export default function FilterTelevisionShowsCard(props) {
@@ -60,13 +60,13 @@ const formControl =
     <Card 
       sx={{
         maxWidth: 345,
-        backgroundColor: "rgb(0, 102, 102)"
+        backgroundColor: "rgb(250,128,114)"
       }} 
       variant="outlined">
       <CardContent>
         <Typography variant="h5" component="h1">
           <SearchIcon fontSize="large" />
-          Filter the television shows.
+          Filter the shows.
         </Typography>
         <TextField
       sx={formControl}
