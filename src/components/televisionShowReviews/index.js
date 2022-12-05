@@ -39,7 +39,7 @@ export default function TelevisionShowReviews({ televisionShow }) {
               <TableCell >{excerpt(r.content)}</TableCell>
               <TableCell >
               <Link
-                  to={`/reviews/${r.id}`}
+                  to={`/televisionreviews/${r.id}`}
                   state={{
                       televisionShowReview: r,
                       televisionShow: televisionShow,
