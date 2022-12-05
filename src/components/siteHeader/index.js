@@ -44,10 +44,10 @@ const SiteHeader = ({ history }) => {
       <AppBar position="fixed" color="secondary">
         <Toolbar>
           <Typography variant="h4" sx={{ flexGrow: 1 }}>
-            TMDB Client
+            JD Entertainment
           </Typography>
           <Typography variant="h6" sx={{ flexGrow: 1 }}>
-            All you ever wanted to know about Movies!
+            One Stop Shop For Everything TV
           </Typography>
             {isMobile ? (
               <>
